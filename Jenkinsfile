@@ -8,10 +8,9 @@ pipeline {
             }
         }
 
-        stage ('Review') {
+        stage ('Test') {
             steps {
-                sh '-P metrics pmd:pmd --reportfile target/*.xml --exclude vendor/ || exit 0'
-                pmd canRunOnFailed: true, pattern: 'target/*.xml'
+                sh 'mvn test'
             }
         }
 
