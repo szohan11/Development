@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'mvn test'
                 junit 'target/*.xml'
+                when 'manual'
             }
         }
 
