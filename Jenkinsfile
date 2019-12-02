@@ -8,13 +8,13 @@ pipeline {
             }
         }
 
-        stage ('Test') {
-            steps {
-                sh 'mvn test'
-                junit 'target/*.xml'
-                when 'manual'
-            }
-        }
+        //stage ('Test') {
+            //steps {
+                //sh 'mvn test'
+                //junit 'target/*.xml'
+                //when 'manual'
+            //}
+        //}
 
         
         
